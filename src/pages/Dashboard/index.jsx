@@ -1,8 +1,14 @@
+import FormCep from "../../components/FormCep";
+import Header from "../../components/Header";
+
 function Dashboard() {
   return (
-    <div>
-      <h1 className="flex text-purple-600">Dashboard</h1>
-    </div>
+    <>
+      <Header />
+      <main>
+        <FormCep />
+      </main>
+    </>
   );
 }
 export default Dashboard;
