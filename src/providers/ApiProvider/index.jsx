@@ -5,8 +5,11 @@ export const ApiContext = createContext([]);
 
 function ApiProvider({ children }) {
   const [infos, setInfos] = useState([]);
-  const cepInfos = (data) => {
-    viaCEP.get(`{data}/json`).then((res) => setInfos(res));
+  const cepInfos = (cepRequest) => {
+    viaCEP
+      .get(`${cepRequest}/json/`)
+      .then((res) => setInfos(res.data))
+      .catch((err) => console.log(err));
   };
   return (
     <ApiContext.Provider
