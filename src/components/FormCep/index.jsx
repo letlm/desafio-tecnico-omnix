@@ -11,8 +11,10 @@ function FormCep() {
 
   const schema = yup.object().shape({
     cep: yup
-      .number("Valor precisa ser um número")
-      .typeError("Obrigatório")
+      .string("Apenas números")
+      .min(8, "CEP deve ter 8 números")
+      .max(8, "CEP deve ter 8 números")
+      .typeError("Apenas números")
       .required("Campo obrigatório"),
   });
 
