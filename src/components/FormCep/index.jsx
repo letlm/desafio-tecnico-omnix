@@ -33,7 +33,7 @@ function FormCep() {
   };
 
   return (
-    <section className=" bg-blue400 w-11/12 md:w-3/4 h-[150px] mt-10">
+    <section className=" bg-blue400 w-[250px] md:w-[300px] h-[200px] mt-10 rounded-md">
       <form
         onSubmit={handleSubmit(onSubmitCep)}
         className="flex flex-col items-center justify-around h-full"
