@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
-
 import { viaCEP } from "../../services";
+import { toast } from "react-toastify";
 
 export const ApiContext = createContext([]);
 
@@ -10,7 +10,11 @@ function ApiProvider({ children }) {
     viaCEP
       .get(`${cepRequest}/json/`)
       .then((res) => setInfos(res.data))
-      .catch((err) => console.log(err));
+      .catch(() =>
+        toast("❌ Ocorreu um erro, por favor tente novamente!", {
+          className: "toastify-color-progress-error",
+        })
+      );
   };
   return (
     <ApiContext.Provider
