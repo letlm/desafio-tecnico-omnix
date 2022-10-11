@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Infos from "../../components/Infos";
 
@@ -8,6 +9,7 @@ function Offers() {
       <main className="flex items-center justify-center">
         <Infos />
       </main>
+      <Footer />
     </>
   );
 }
