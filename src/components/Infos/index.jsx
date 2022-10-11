@@ -15,26 +15,28 @@ function Infos() {
   };
 
   return (
-    <section className="flex flex-col w-10/12 items-center justify-center">
-      <div className=" w-full max-w-[1100px] h-[200px] mt-10">
-        <h3 className="text-3xl font-serif font-bold text-blue500">
+    <section className="flex flex-col w-10/12 h-full items-center justify-center">
+      <div className=" w-full max-w-[1100px] h-[200px] mb-10 mt-10">
+        <h3 className="sm:text-lg md:text-3xl font-serif font-bold text-blue500">
           Informações sobre sua região:
         </h3>
         <div className="flex flex-col border border-blue400 rounded-md p-5">
-          <span className="text-blue400 font-bold font-sans text-lg">
+          <span className="text-blue400 font-bold font-sans sm:text-base md:text-lg">
             CEP: {infos.cep}
           </span>
-          <span className="text-blue400 font-sans">
+          <span className="text-blue400 font-sans text-base">
             {infos.logradouro} - {infos.complemento}
           </span>
 
-          <span className="text-blue400 font-sans">Bairro: {infos.bairro}</span>
-          <span className="text-blue400 font-sans">
+          <span className="text-blue400 font-sans text-base">
+            Bairro: {infos.bairro}
+          </span>
+          <span className="text-blue400 font-sans text-base">
             {infos.localidade} - {infos.uf}
           </span>
         </div>
       </div>
-      <div className="flex flex-row flex-wrap gap-2 items-center">
+      <div className="flex flex-row flex-wrap gap-1 justify-center items-center">
         <CardOffers
           icon={<AiOutlineWifi size={28} />}
           mega="250 Mega"
@@ -60,7 +62,7 @@ function Infos() {
           assinar="Assinar"
         />
       </div>
-      <div className="flex w-full max-w-[1100px] justify-end mt-10">
+      <div className="flex w-full max-w-[1100px] justify-end mt-10 mb-20">
         <button
           className="bg-blue500 text-white w-48 h-10 rounded-full cursor-pointer focus:outline-none hover:bg-blue400"
           onClick={() => returnDashboard()}
