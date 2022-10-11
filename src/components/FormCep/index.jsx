@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useContext, useState } from "react";
 import { ApiContext } from "../../providers/ApiProvider";
-// import { useHistory } from "react-router-dom";
 
 function FormCep() {
   const [number, setNumber] = useState("");
@@ -26,12 +25,10 @@ function FormCep() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  // const history = useHistory();
 
   const onSubmitCep = () => {
     cepInfos(number);
     setValue("cep", "");
-    // history.push("/offers");
   };
 
   return (
