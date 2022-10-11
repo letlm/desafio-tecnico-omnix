@@ -42,10 +42,7 @@ module.exports = {
       blue400: "#004b5c",
       blue300: "#003f92",
       blue200: "#80dad8",
-      pink200: "#F268A9",
-      lightpurple: "#EEF2FF",
-      lightgreen: "#DAF2F1",
-      lightyellow: "#FEFBF2",
+      black100: "#2d2d2d",
     }),
     columns: {
       auto: "auto",

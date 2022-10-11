@@ -1,8 +1,14 @@
+import Header from "../../components/Header";
+import Infos from "../../components/Infos";
+
 function Offers() {
   return (
-    <div>
-      <h1 className="flex text-purple-600">Offer</h1>
-    </div>
+    <>
+      <Header />
+      <main className="flex items-center justify-center">
+        <Infos />
+      </main>
+    </>
   );
 }
 export default Offers;
