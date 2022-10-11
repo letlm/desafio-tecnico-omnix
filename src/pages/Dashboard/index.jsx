@@ -1,12 +1,12 @@
-import FormCep from "../../components/FormCep";
 import Header from "../../components/Header";
+import Home from "../../components/Home";
 
 function Dashboard() {
   return (
     <>
       <Header />
-      <main>
-        <FormCep />
+      <main className="flex items-center justify-center">
+        <Home />
       </main>
     </>
   );
